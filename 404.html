@@ -1,1 +1,95 @@
-Not found
+<!DOCTYPE html>
+
+
+<html lang="zh-TW">
+<head>
+    <!-- 使用中文語言(UTF-8) -->
+    <meta charset="utf-8"> 
+    <title>
+     404 not found page
+    </title>  
+
+    <!--網頁內嵌式:CSS樣式表(style寫在head裡面) -->
+
+    <style>  
+    	body {
+           margin: 0; 
+           padding: 0;  
+           font-size: 100%;
+           line-height: 2;
+           background-color: cornflowerblue;
+        }
+
+        /* heading 設定字型格式*/
+    	.heading {
+    		font-family: "微軟正黑體"; 
+    		color:#035F7F;
+    		font-weight: bolder;
+        }
+
+        /* inside 設定圖片位置*/
+        .inside {
+        	position: relative;
+        }
+
+    	img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 404主畫面*/
+    	#not_found_page{
+    		margin: 0 auto;
+    		width: 1431px;
+    		height: 994px;
+    		background: url(center_picture-04.png);
+    	}
+    	#title1{
+    		position: absolute;
+    		top: 300px;
+    		right:10px;
+    	    background-image: url(oops.png);
+       	    padding-top: 98px;
+    	    padding-left: 20px;
+    	    background-repeat: no-repeat;
+    	}
+    	#title2{
+    		position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 36px;
+    	}
+    	/* picture_block 放置圖片的區塊*/
+    	#picture_block{
+    		position: absolute;
+    		left: 262px;
+    		top: 205px;
+    		width: 661px;
+    		height: 418px;
+    	}
+    	/* 實際圖片顯示置中*/
+        #picture_inside{
+        	text-align: center;
+        }
+
+    </style>
+</head>
+  
+
+<body background="rain-02.png" > 
+   <div id="page">   <!-- page是最大的父類別-->
+     <div id="not_found_page" class="inside">
+        <h1 id="title1" class="heading" >您要找的頁面目前不存在喔！</h1>
+        <h2 id="title2" class="heading" style="color:black">讓被遺棄的動物找到一個家，請以認養代替購買。</h2>
+
+        <div id="picture_block">
+        	<div id="picture_inside" class="inside">
+        		<img src="cat01.jpg" alt="認養動物照片1" style="width:520px;">
+        	</div>
+        </div>
+     </div>  
+   </div>
+</body>
+</html>
