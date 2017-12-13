@@ -95,13 +95,27 @@
      </div>  
    </div>
     <script type="text/javascript">
+//         $(document).ready(function() {
+//             var offset = Math.round(Math.random()*49 + 1);
+//             console.log(offset);
+//             var imageAPI = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=f4a75ba9-7721-4363-884d-c3820b0b917c&limit=1&offset=";
+//             $.get( imageAPI + offset, function( data ) {
+//                 $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+//             }, 'json');
+//         });
+        
         $(document).ready(function() {
             var offset = Math.round(Math.random()*49 + 1);
-            console.log(offset);
             var imageAPI = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=f4a75ba9-7721-4363-884d-c3820b0b917c&limit=1&offset=";
-            $.get( imageAPI + offset, function( data ) {
-                $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
-            }, 'json');
+            $.ajax({
+                  method: "GET",
+                  url: imageAPI + offset,
+                  dataType: "json",
+                  crossDomain: "true",
+                  success: function(data) {
+                      $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+                  }
+           });
         });
     </script>
 </body>
