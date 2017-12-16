@@ -106,11 +106,11 @@
         
         $(document).ready(function() {
             var offset = Math.round(Math.random()*49 + 1);
-            var imageAPI = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=f4a75ba9-7721-4363-884d-c3820b0b917c&limit=1&offset=";
+            var imageAPI = "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?";
             $.ajax({
                   method: "GET",
                   url: imageAPI + offset,
-                  dataType: "json",
+                  dataType: "jsonp",
                   crossDomain: "true",
                   success: function(data) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
