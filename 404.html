@@ -127,7 +127,8 @@
                   crossDomain: true,
                   jsonp: "false",
                   success: function(data) {
-                      $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+//                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+                      console.dir(data());
                   }
            });
         });
