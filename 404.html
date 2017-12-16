@@ -126,7 +126,7 @@
                   url: imageAPI,
                   dataType: "jsonp",
                   jsonp: "offset",
-                  jsonpCallback:'offset',
+                  jsonpCallback:'',
                   success: function(jsonData) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
