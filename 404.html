@@ -104,14 +104,29 @@
 //             }, 'json');
 //         });
         
+//         $(document).ready(function() {
+//             var offset = Math.round(Math.random()*49 + 1);
+//             var imageAPI = "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?";
+//             $.ajax({
+//                   type: "GET",
+//                   url: imageAPI + offset,
+//                   dataType: "jsonp",
+//                   jsonp: "callback",
+//                   success: function(jsonData) {
+//                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+//                   }
+//            });
+//         });
+        
         $(document).ready(function() {
             var offset = Math.round(Math.random()*49 + 1);
             var imageAPI = "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?";
             $.ajax({
-                  type: "GET",
-                  url: imageAPI + offset,
+                  type: "get",
+                  url: imageAPI,
                   dataType: "jsonp",
-                  jsonp: "callback",
+                  jsonp: "offset",
+                  jsonpCallback:'offset',
                   success: function(jsonData) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
