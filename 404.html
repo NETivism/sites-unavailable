@@ -119,14 +119,13 @@
 //         });
         
         $(document).ready(function() {
-            var offset = Math.round(Math.random()*49 + 1);
-            var imageAPI = "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?";
+            var offset = Math.round(Math.random()*49 + 1); 
             $.ajax({
                   type: "get",
-                  url: imageAPI,
+                  url: "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?",
+                  data: {offset:""}
                   dataType: "jsonp",
-                  jsonp: "offset",
-                  jsonpCallback:'',
+                  crossDomain: true,
                   success: function(jsonData) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
