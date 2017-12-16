@@ -119,6 +119,9 @@
 //         });
         
         $(document).ready(function() {
+            function a(rtn) {
+                console.dir(rtn);
+            }
             var offset = Math.round(Math.random()*49 + 1); 
             $.ajax({
                   type: "get",
@@ -128,7 +131,6 @@
                   jsonp: "false",
                   success: function(data) {
 //                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
-                      console.dir(data());
                   }
            });
         });
