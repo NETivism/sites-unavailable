@@ -126,8 +126,7 @@
                   dataType: "jsonp",
                   crossDomain: true,
                   jsonp: "false",
-                  jsonpCallback: "offset",
-                  success: function(jsonData) {
+                  success: function(data) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
            });
