@@ -112,7 +112,6 @@
                   url: imageAPI + offset,
                   dataType: "jsonp",
                   jsonp: "callback",
-                  jsonpCallback:"flightHandler",
                   success: function(jsonData) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
