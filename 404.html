@@ -122,10 +122,12 @@
             var offset = Math.round(Math.random()*49 + 1); 
             $.ajax({
                   type: "get",
-                  url: "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset=10&callback=?",
+                  url: "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset="+ offset +"&callback=?",
                   data: {todo:"jsonp"}
                   dataType: "jsonp",
                   crossDomain: true,
+                  jsonp: "false",
+                  jsonpCallback: "offset",
                   success: function(jsonData) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
                   }
