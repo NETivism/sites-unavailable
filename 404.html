@@ -122,10 +122,10 @@
             function a(rtn) {
                 console.dir(rtn);
             }
-            var offset = Math.round(Math.random()*49 + 1); 
+            var offset = Math.round((Math.random() * 49) + 1); 
             $.ajax({
                   type: "get",
-                  url: "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset="+ offset +"&callback=a",
+                  url: "https://netivism.com.tw/datataipeijsonp.php?limit=1&offset="+ offset +"&callback=?",
                   dataType: "jsonp",
                   crossDomain: true,
                    
