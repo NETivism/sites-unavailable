@@ -90,8 +90,12 @@
         <div id="picture_block">
         	<div id="picture_inside" class="inside">
 <!--         		<img src="images/cat01.jpg" alt="認養動物照片1" style="width:365px;"> -->
+<!--                 <div class="animal-name">名字：</div> -->
                 <img src="https://i2.wp.com/insights.samsung.com/wp-content/themes/samsung-insights/images/image-loader.gif?ssl=1" alt="認養動物照片1" style="width:365px;">
-        	</div>
+<!--                 <div class="animal-note">描述：</div>
+                <div class="animal-resettlement">聯絡資料：</div>
+                <div class="animal-phone">電話：</div> -->
+            </div>
         </div>
      </div>  
    </div>
@@ -110,6 +114,10 @@
                    
                   success: function(data) {
                       $('#picture_inside').find('img').attr('src', data.result.results[0].ImageName);
+//                       $('#picture_inside').find('.animal-name').attr('src', data.result.results[0].ImageName);
+//                       $('#picture_inside').find('animal-note').attr('src', data.result.results[0].ImageName);
+//                       $('#picture_inside').find('animal-resettlement').attr('src', data.result.results[0].ImageName);
+//                       $('#picture_inside').find('animal-phone').attr('src', data.result.results[0].ImageName);
                       console.log(data);
                   }
            });
